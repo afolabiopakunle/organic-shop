@@ -3,15 +3,24 @@ import {AngularFireAuth} from "@angular/fire/compat/auth";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private afAuth: AngularFireAuth) { }
+  user$: Observable<firebase.User | null>;
 
-  login() {
+  constructor(private afAuth: AngularFireAuth) {
+    this.user$ = afAuth.authState
+  }
+
+  signIn() {
     this.afAuth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+  }
+
+  signOut() {
+    this.afAuth.signOut();
   }
 }
