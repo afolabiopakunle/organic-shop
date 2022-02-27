@@ -1,0 +1,7 @@
+.dropdown-toggle::after {
+  vertical-align: 2px;
+}
+
+.navbar-expand-md .navbar-nav .dropdown-menu {
+  text-align: right;
+}
