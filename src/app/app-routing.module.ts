@@ -8,10 +8,12 @@ import {OrderSuccessComponent} from "./order-success/order-success.component";
 import {LoginComponent} from "./login/login.component";
 import {AdminProductsComponent} from "./admin/admin-products/admin-products.component";
 import {AdminOrdersComponent} from "./admin/admin-orders/admin-orders.component";
+import {MyOrdersComponent} from "./my-orders/my-orders.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'products', component: ProductsComponent},
+  {path: 'my-orders', component: MyOrdersComponent},
   {path: 'shopping-cart', component: ShoppingCartComponent},
   {path: 'check-out', component: CheckoutComponent},
   {path: 'order-success', component: OrderSuccessComponent},
